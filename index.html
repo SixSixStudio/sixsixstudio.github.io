@@ -111,6 +111,30 @@
     .hero-grid{grid-template-columns:1.08fr .92fr;align-items:center;gap:54px}
     .hero{padding:88px 0 64px}
   }
+  /* portrait phones: a 16:9 clip stretched over a tall hero gets cropped to its
+     black centre, which is exactly where the light is not. Keep it at its own
+     aspect at the top of the hero and fade it into the page instead. */
+  @media(max-width:899px){
+    .hero{padding-top:52px}
+    .hero-bg{background-position:50% 0;background-size:100% auto;background-repeat:no-repeat}
+    .hero-bg video{
+      height:auto;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 50%;
+      opacity:.8;
+      -webkit-mask-image:linear-gradient(180deg,#000 45%,rgba(0,0,0,.55) 72%,transparent 100%);
+      mask-image:linear-gradient(180deg,#000 45%,rgba(0,0,0,.55) 72%,transparent 100%);
+    }
+    .hero-tint{
+      background:linear-gradient(180deg,
+        rgba(11,11,12,.42) 0%,rgba(11,11,12,.74) 30%,rgba(11,11,12,.93) 55%,
+        rgba(11,11,12,.98) 74%,#0B0B0C 100%);
+    }
+    .hero-mark{
+      top:-26px;right:-46px;bottom:auto;width:min(74vw,330px);opacity:.14;
+    }
+  }
+  @media(max-width:420px){
+    .hero-mark{width:min(84vw,300px);top:-14px;right:-52px;opacity:.15}
+  }
   @media(prefers-reduced-motion:reduce){
     .hero-bg video{display:none}
     .hero-tint{background:rgba(11,11,12,.82)}
