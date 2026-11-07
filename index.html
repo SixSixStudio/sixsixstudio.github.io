@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sixsix Studio — short-form video for London businesses</title>
+<meta name="description" content="Vertical video for London businesses from £35. Edited from the footage you already have — no shoot, no contract, delivery date agreed upfront.">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:title" content="Sixsix Studio — short-form video for London businesses">
+<meta property="og:description" content="Three vertical videos from £35. No shoot, no contract, delivery date agreed upfront.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="brand/logo-badge-800.png">
+<link rel="icon" href="brand/favicon.png">
+<link rel="apple-touch-icon" href="brand/mark-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B0C;
+    --panel:#121214;
+    --panel-2:#161619;
+    --line:rgba(255,255,255,.09);
+    --ink:#F2F1ED;
+    --muted:#9D9B95;
+    --accent:#FFE81A;
+    --radius:16px;
+    --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{margin:0;font-weight:400;letter-spacing:-.02em;line-height:1.1}
+  .serif{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.01em}
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+  .muted{color:var(--muted)}
+  .small{font-size:14px;line-height:1.55}
+  .eyebrow{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+    display:flex;align-items:center;gap:10px;margin:0 0 20px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);display:block;flex:0 0 auto}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    background:rgba(11,11,12,.82);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;gap:18px;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+  .brand img{width:34px;height:34px;border-radius:50%}
+  .brand span{font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+  .nav-links{display:none;gap:26px;font-size:14px}
+  .nav-links a{text-decoration:none;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav .cta{display:none}
+  @media(min-width:860px){
+    .nav-links{display:flex}
+    .nav .cta{display:inline-flex}
+  }
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    padding:14px 22px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:500;
+    border:1px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--accent);color:#0B0B0C;font-weight:600}
+  .btn-primary:hover{background:#FFF06A}
+  .btn-ghost{border-color:rgba(255,255,255,.18);color:var(--ink)}
+  .btn-ghost:hover{border-color:rgba(255,255,255,.4)}
+  .btn-sm{padding:10px 16px;font-size:13px}
+  .btn svg{flex:0 0 auto}
+
+  /* hero */
+  .hero{position:relative;padding:60px 0 44px;overflow:hidden;isolation:isolate}
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;overflow:hidden;
+    background:url("brand/video/hero-poster.jpg") center/cover no-repeat;
+  }
+  .hero-bg video{
+    width:100%;height:100%;object-fit:cover;object-position:50% 50%;
+    transform:scaleX(-1);opacity:.62;
+  }
+  .hero-tint{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(90deg,rgba(11,11,12,.95) 0%,rgba(11,11,12,.87) 38%,rgba(11,11,12,.62) 72%,rgba(11,11,12,.52) 100%),
+      linear-gradient(180deg,rgba(11,11,12,.62) 0%,rgba(11,11,12,.18) 42%,rgba(11,11,12,.78) 100%);
+  }
+  .hero-mark{
+    position:absolute;right:-70px;bottom:-130px;width:min(62vw,470px);
+    opacity:.075;pointer-events:none;user-select:none;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:-40% -20% auto -20%;height:560px;z-index:1;
+    background:radial-gradient(58% 60% at 50% 40%,rgba(255,232,26,.07),transparent 72%);
+    pointer-events:none;
+  }
+  .hero-grid{position:relative;z-index:2;display:grid;gap:30px}
+  @media(min-width:900px){
+    .hero-grid{grid-template-columns:1.08fr .92fr;align-items:center;gap:54px}
+    .hero{padding:88px 0 64px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .hero-bg video{display:none}
+    .hero-tint{background:rgba(11,11,12,.82)}
+  }
+  .hero h1{font-size:clamp(38px,9.6vw,68px);max-width:14ch}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero .lede{margin:20px 0 0;max-width:44ch;font-size:clamp(16px,4.2vw,19px);color:#CFCDC6}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .trust{margin:20px 0 0;font-size:13.5px;color:var(--muted)}
+
+  .hero-media{
+    position:relative;border-radius:20px;overflow:hidden;
+    border:1px solid rgba(255,255,255,.12);
+    height:clamp(330px,56vh,520px);
+    background:#0f0f11;
+  }
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+  .hero-media::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:46%;
+    background:linear-gradient(180deg,transparent,rgba(11,11,12,.92));
+    pointer-events:none;
+  }
+  .hero-chip{
+    position:absolute;left:16px;right:16px;bottom:16px;z-index:2;
+    display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.04em;color:#E8E6DF;
+  }
+  .hero-chip .dot{
+    width:7px;height:7px;border-radius:50%;background:var(--accent);flex:0 0 auto;
+    box-shadow:0 0 0 4px rgba(255,232,26,.15);
+  }
+
+  .strip{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:15px 0;margin-top:38px;
+    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#827F79;
+    display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;text-align:center;
+  }
+  .strip span{white-space:nowrap}
+  .strip b{color:var(--accent);font-weight:400}
+
+  /* generic section */
+  section{padding:66px 0}
+  .sec-head{max-width:660px;margin-bottom:34px}
+  .sec-head h2{font-size:clamp(30px,7.2vw,46px)}
+  .sec-head p{margin:14px 0 0;color:var(--muted);max-width:54ch}
+
+  /* three up */
+  .three{display:grid;gap:14px}
+  @media(min-width:760px){.three{grid-template-columns:repeat(3,1fr);gap:18px}}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;
+  }
+  .card h3{font-size:19px;margin-bottom:8px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  .card img{
+    width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;
+    margin:0 0 18px;display:block;filter:saturate(.95);
+  }
+  .num{
+    font-family:"Instrument Serif",Georgia,serif;font-size:34px;color:var(--accent);
+    line-height:1;margin-bottom:16px;display:block;
+  }
+
+  /* pricing */
+  #packages{padding-top:20px}
+  .plans{display:grid;gap:14px}
+  @media(min-width:720px){.plans{grid-template-columns:1fr 1fr;gap:18px}}
+  @media(min-width:1000px){.plans{grid-template-columns:repeat(4,1fr)}}
+  .plan{
+    background:linear-gradient(180deg,var(--panel-2),var(--panel));
+    border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;
+    display:flex;flex-direction:column;min-height:100%;
+  }
+  .plan.feature{border-color:rgba(255,232,26,.45);box-shadow:0 0 0 1px rgba(255,232,26,.08) inset}
+  .tag{
+    font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#0B0B0C;background:var(--accent);
+    padding:4px 9px;border-radius:999px;align-self:flex-start;margin-bottom:14px;font-weight:600;
+  }
+  .plan h3{font-size:17px;letter-spacing:0}
+  .price{font-family:"Instrument Serif",Georgia,serif;font-size:42px;line-height:1;margin:12px 0 2px}
+  .price small{font-family:Inter,sans-serif;font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+  .plan ul{list-style:none;padding:0;margin:16px 0 20px;font-size:14px;color:#C6C4BE}
+  .plan li{position:relative;padding-left:18px;margin-bottom:8px}
+  .plan li::before{
+    content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;
+    background:rgba(255,232,26,.55);
+  }
+  .plan .btn{margin-top:auto;width:100%}
+
+  .addons{
+    margin-top:14px;border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px;display:grid;gap:14px;background:rgba(255,255,255,.02);
+  }
+  @media(min-width:720px){.addons{grid-template-columns:repeat(3,1fr);gap:22px}}
+  .addon{display:flex;justify-content:space-between;gap:14px;align-items:baseline;font-size:14.5px}
+  .addon b{font-family:"Instrument Serif",Georgia,serif;font-size:22px;font-weight:400;white-space:nowrap}
+  .notes{margin:18px 0 0;font-size:13px;color:#7E7C77}
+
+  /* process */
+  .steps{counter-reset:s;display:grid;gap:0;border-top:1px solid var(--line)}
+  .step{
+    counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:18px;
+    padding:24px 0;border-bottom:1px solid var(--line);
+  }
+  .step::before{
+    content:counter(s,decimal-leading-zero);font-family:"Instrument Serif",Georgia,serif;
+    font-size:22px;color:var(--accent);
+  }
+  .step h3{font-size:17px;margin-bottom:6px}
+  .step p{margin:0;color:var(--muted);font-size:15px;max-width:56ch}
+
+  /* revisions */
+  .rev-box{
+    border:1px solid var(--line);border-radius:18px;padding:30px 24px;
+    background:
+      radial-gradient(110% 120% at 100% 0%,rgba(255,232,26,.05),transparent 55%),
+      rgba(255,255,255,.018);
+  }
+  .rev-box h2{font-size:clamp(26px,6.4vw,38px);max-width:22ch}
+  .rev-cols{display:grid;gap:24px;margin-top:24px}
+  @media(min-width:760px){.rev-cols{grid-template-columns:1fr 1fr;gap:44px}}
+  .rev-cols h3{
+    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    margin:0 0 12px;font-weight:500;
+  }
+  .rev-cols ul{list-style:none;padding:0;margin:0;font-size:15px;color:#C6C4BE}
+  .rev-cols li{position:relative;padding-left:17px;margin-bottom:9px}
+  .rev-cols li::before{
+    content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;
+    background:rgba(255,232,26,.55);
+  }
+  .rev-cols .no li::before{background:rgba(255,255,255,.22)}
+  .rev-note{margin:22px 0 0;font-size:13.5px;color:#8A8882;max-width:64ch}
+
+  /* sound */
+  .split{display:grid;gap:26px}
+  @media(min-width:800px){.split{grid-template-columns:1fr 1fr;gap:56px;align-items:start}}
+  .split h2{font-size:clamp(28px,6.8vw,42px);max-width:18ch}
+  .split p{color:#C6C4BE;margin:0 0 14px}
+  .split p:last-child{margin-bottom:0}
+  .quote{
+    border-left:2px solid var(--accent);padding:4px 0 4px 18px;margin:24px 0 0;
+    font-family:"Instrument Serif",Georgia,serif;font-size:21px;font-style:italic;color:#E9E7E0;line-height:1.4;
+  }
+
+  /* formats */
+  .formats{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+  .fmt{
+    position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);
+    background:#0f0f11;margin:0;
+  }
+  .fmt img{width:100%;height:100%;object-fit:cover;aspect-ratio:2/3;opacity:.92}
+  .fmt::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:52%;
+    background:linear-gradient(180deg,transparent,rgba(11,11,12,.94));pointer-events:none;
+  }
+  .fmt figcaption{
+    position:absolute;left:12px;right:12px;bottom:12px;z-index:2;
+    font-size:11.5px;letter-spacing:.02em;color:#EDEBE4;line-height:1.45;
+  }
+  .fmt figcaption b{display:block;font-weight:600;font-size:12.5px;letter-spacing:.02em}
+  .fmt figcaption span{color:#A9A7A1;font-size:11px}
+
+  /* contact */
+  #contact{padding-bottom:56px}
+  .contact-box{
+    border:1px solid var(--line);border-radius:22px;padding:38px 26px;
+    background:
+      radial-gradient(120% 120% at 85% 0%,rgba(255,232,26,.10),transparent 55%),
+      var(--panel);
+  }
+  .contact-box h2{font-size:clamp(30px,8vw,52px);max-width:20ch}
+  .contact-box p{color:#C6C4BE;max-width:48ch;margin:16px 0 0}
+  .contact-box .actions{margin-top:26px}
+  .mailto{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(255,232,26,.4)}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 44px}
+  .foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;font-size:13px;color:#7E7C77}
+  .foot .brand img{width:26px;height:26px}
+  .foot a{text-decoration:none}
+  .foot a:hover{color:var(--ink)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Sixsix Studio home">
+      <img src="brand/mark-256.png" alt="">
+      <span>Sixsix Studio</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#what">What we do</a>
+      <a href="#packages">Prices</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary btn-sm cta" href="mailto:sixsixlong@protonmail.com?subject=Trial%20pack%20%C2%A335&amp;body=Business%3A%0ALocation%3A%0AWhat%20I%27d%20like%20to%20promote%3A">£35 trial</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="metadata" poster="brand/video/hero-poster.jpg" tabindex="-1">
+        <source src="brand/video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-tint"></div>
+      <img class="hero-mark" src="brand/mark-circle.png" alt="">
+    </div>
+
+    <div class="wrap hero-grid">
+      <div>
+        <h1 class="serif">Short-form video that brings <em>customers</em> in.</h1>
+        <p class="lede">Three vertical videos from £35. Edited from the footage already on your phone — no shoot to arrange, no contract, no agency retainer. We agree a delivery date before we start.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:sixsixlong@protonmail.com?subject=Trial%20pack%20%C2%A335&amp;body=Business%3A%0ALocation%3A%0AWhat%20I%27d%20like%20to%20promote%3A">
+            Start the £35 trial
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#packages">See prices</a>
+        </div>
+        <p class="trust">Two revisions included. Every enquiry answered personally.</p>
+      </div>
+
+      <figure class="hero-media" aria-label="A video editing timeline on a monitor">
+        <img src="brand/stock/hero.jpg" alt="Video editing timeline open on a monitor" width="800" height="1000" fetchpriority="high">
+        <figcaption class="hero-chip"><span class="dot" aria-hidden="true"></span>Cut, captioned and exported here. No shoot required.</figcaption>
+      </figure>
+    </div>
+
+    <div class="wrap" style="position:relative;z-index:2">
+      <div class="strip">
+        <span>Vertical first</span><b>·</b>
+        <span>Delivery date agreed</span><b>·</b>
+        <span>Captions included</span><b>·</b>
+        <span>Two revisions</span><b>·</b>
+        <span>No contract</span><b>·</b>
+        <span>You keep the files</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="what">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="serif">Built for real businesses, not for brands.</h2>
+        <p>Every decision is made for one thing: a customer deciding whether to walk in, book or buy. Format, pacing, captions, the first two seconds.</p>
+      </div>
+      <div class="three">
+        <article class="card">
+          <img src="brand/stock/step-vertical.jpg" alt="Two phones held upright showing vertical screens" width="560" height="420" loading="lazy">
+          <span class="num">01</span>
+          <h3>Vertical first</h3>
+          <p>Cut for Reels, TikTok and Shorts at 9:16. Safe zones, readable captions, sound that still works muted.</p>
+        </article>
+        <article class="card">
+          <img src="brand/stock/step-footage.jpg" alt="Working from a laptop on footage sent in by the client" width="560" height="420" loading="lazy">
+          <span class="num">02</span>
+          <h3>No shoot needed</h3>
+          <p>Send three to five clips from your phone, or approve an edit built from clean licensed visuals. Nothing to arrange.</p>
+        </article>
+        <article class="card">
+          <img src="brand/stock/step-ontime.jpg" alt="Planner and pen marking an agreed date" width="560" height="420" loading="lazy">
+          <span class="num">03</span>
+          <h3>Delivered on time</h3>
+          <p>We agree the deadline before we start, then hit it. Script, edit and captions are ours to manage. Two revision rounds, then it is yours.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="formats">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="serif">What we make</h2>
+        <p>Three shapes cover almost everything: one film that explains you, short cutdowns for the feed, and a six-second opener that stops the scroll. These are format references — client work goes here as it ships.</p>
+      </div>
+      <div class="formats">
+        <figure class="fmt">
+          <img src="brand/stock/fmt-florist.jpg" alt="Flowers in an independent florist shop" width="420" height="640" loading="lazy">
+          <figcaption><b>30–45s · the film</b><span>Who you are, what you do, why here</span></figcaption>
+        </figure>
+        <figure class="fmt">
+          <img src="brand/stock/fmt-barber.jpg" alt="Barber shop tools and chair" width="420" height="640" loading="lazy">
+          <figcaption><b>15–20s · the cutdown</b><span>One service, one reason to book</span></figcaption>
+        </figure>
+        <figure class="fmt">
+          <img src="brand/stock/fmt-nails.jpg" alt="Nail technician working on a client's nails" width="420" height="640" loading="lazy">
+          <figcaption><b>6s · the hook</b><span>The scroll-stopper, no sound needed</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="serif">Prices, plainly.</h2>
+        <p>No setup fee, no minimum term. Cancel any month. These are opening prices — they go up once the first clients are in, not before.</p>
+      </div>
+
+      <div class="plans">
+        <article class="plan feature">
+          <span class="tag">Start here</span>
+          <h3>Trial pack</h3>
+          <p class="price">£35</p>
+          <p class="small muted">one-off</p>
+          <ul>
+            <li>1 × 30–45s film</li>
+            <li>2 × 15–20s cutdowns</li>
+            <li>2 revision rounds</li>
+            <li>Delivery date agreed</li>
+          </ul>
+          <a class="btn btn-primary" href="mailto:sixsixlong@protonmail.com?subject=Trial%20pack%20%C2%A335&amp;body=Business%3A%0ALocation%3A%0AWhat%20I%27d%20like%20to%20promote%3A">Book the trial</a>
+        </article>
+
+        <article class="plan">
+          <h3>Starter</h3>
+          <p class="price">£75<small> /month</small></p>
+          <p class="small muted">8 videos a month</p>
+          <ul>
+            <li>8 vertical videos</li>
+            <li>2 revisions each</li>
+            <li>Captions + hook variants</li>
+            <li>Rolling monthly</li>
+          </ul>
+          <a class="btn btn-ghost" href="mailto:sixsixlong@protonmail.com?subject=Starter%20%C2%A375&amp;body=Business%3A%0ALocation%3A">Enquire</a>
+        </article>
+
+        <article class="plan">
+          <h3>Growth</h3>
+          <p class="price">£140<small> /month</small></p>
+          <p class="small muted">16 videos a month</p>
+          <ul>
+            <li>16 vertical videos</li>
+            <li>4 revision rounds each</li>
+            <li>Monthly content plan</li>
+            <li>Priority turnaround</li>
+          </ul>
+          <a class="btn btn-ghost" href="mailto:sixsixlong@protonmail.com?subject=Growth%20%C2%A3140&amp;body=Business%3A%0ALocation%3A">Enquire</a>
+        </article>
+
+        <article class="plan">
+          <h3>Your phone, our edit</h3>
+          <p class="price">£99<small> /month</small></p>
+          <p class="small muted">12 edits from your footage</p>
+          <ul>
+            <li>12 edits of your own clips</li>
+            <li>Your team, your place</li>
+            <li>Captions + sound design</li>
+            <li>Best for busy owners</li>
+          </ul>
+          <a class="btn btn-ghost" href="mailto:sixsixlong@protonmail.com?subject=Your%20phone%2C%20our%20edit&amp;body=Business%3A%0ALocation%3A">Enquire</a>
+        </article>
+      </div>
+
+      <div class="addons">
+        <div class="addon"><span>Single video, one-off</span><b>£25</b></div>
+        <div class="addon"><span>Channel audit — credited against your first pack</span><b>£25</b></div>
+        <div class="addon"><span>Filming day, London</span><b>£150</b></div>
+      </div>
+      <p class="notes">Prices in pounds, VAT not applicable. Filming days are booked after the first pack, once we know what your audience responds to.</p>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="serif">Four steps, then it is live.</h2>
+        <p>You spend almost no time on it. We do the rest.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div>
+            <h3>Send what you have</h3>
+            <p>Three to five clips from your phone, or a link to your website and Instagram. Nothing polished needed.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>We write the cut</h3>
+            <p>Hook, structure, voice line, captions. You get the script before we edit, so nothing is said that you would not say.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>You approve</h3>
+            <p>One draft, two revision rounds. Feedback in plain language is fine — “this bit drags” is enough.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Publish or hand over</h3>
+            <p>Files sized for Reels, TikTok and Shorts, plus the captions as text. Post it yourself or give us access.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="revisions" style="padding-top:0">
+    <div class="wrap">
+      <div class="rev-box">
+        <p class="eyebrow">Revisions</p>
+        <h2 class="serif">What a revision is</h2>
+        <p class="muted" style="max-width:56ch;margin:12px 0 0">One round means one batch of notes on a draft we have already sent you — not unlimited tweaking. Every pack says how many rounds are included.</p>
+        <div class="rev-cols">
+          <div>
+            <h3>Counts as a revision</h3>
+            <ul>
+              <li>Rewording captions or the voice line</li>
+              <li>Trimming, reordering or swapping shots from your footage</li>
+              <li>Changing caption style, pace or the on-screen text</li>
+              <li>A different voice read or a corrected fact</li>
+            </ul>
+          </div>
+          <div class="no">
+            <h3>Counts as a new video</h3>
+            <ul>
+              <li>Changing the concept after you have approved it</li>
+              <li>New footage that arrives after the edit has started</li>
+              <li>Adding a service, a location or a person you did not brief us on</li>
+              <li>A different length or format to the one agreed</li>
+            </ul>
+          </div>
+        </div>
+        <p class="rev-note">Send your notes in one message — that is what keeps it to one round. The clock starts when the draft is sent to you, not when you get round to watching it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Sound</p>
+        <h2 class="serif">Clean sound, no stock music.</h2>
+      </div>
+      <div>
+        <p>Most small-business video is ruined by library music that sounds like an advert from 2009. We do not use it.</p>
+        <p>Voice, real room ambience, simple sound design. The result sits closer to editorial than advertising — which is exactly why it does not get scrolled past.</p>
+        <p class="quote">If you want a track, add it after delivery or send us a licensed file. We will cut to it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <h2 class="serif">One email is all it takes.</h2>
+        <p>Tell us the business name and what you would like more of — new customers, a service nobody knows you offer, a launch. We will come back with a plan and a price, not a discovery call.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:sixsixlong@protonmail.com?subject=Trial%20pack%20%C2%A335&amp;body=Business%3A%0ALocation%3A%0AWhat%20I%27d%20like%20to%20promote%3A">
+            Email sixsixlong@protonmail.com
+          </a>
+        </div>
+        <p class="small muted" style="margin-top:20px">Or write to <a class="mailto" href="mailto:sixsixlong@protonmail.com">sixsixlong@protonmail.com</a> directly. Based in London.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top"><img src="brand/mark-256.png" alt=""><span>Sixsix Studio</span></a>
+    <span>Short-form video for London businesses</span>
+    <span><a href="mailto:sixsixlong@protonmail.com">sixsixlong@protonmail.com</a> · <a href="https://instagram.com/six6long" rel="noopener">@six6long</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
