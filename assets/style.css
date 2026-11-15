@@ -2,7 +2,7 @@
 :root{
   --bg:#08080A; --bg2:#0C0C0F;
   --ink:#F4F2EC; --mut:#9A9A93; --dim:#75756F;
-  --y:#F2E43B; --y-dim:#B8AE2B;
+  --y:#FFFA00; --y-dim:#CFC800;
   --line:rgba(244,242,236,.11);
   --r:18px;
   --max:1280px;
@@ -157,7 +157,7 @@ h2 em{font-style:italic;color:var(--y)}
 .card .vis{position:absolute;right:-40px;top:-40px;width:190px;height:190px;border-radius:50%;
   filter:blur(38px);opacity:.32;transition:opacity .5s,transform .7s var(--ease);pointer-events:none}
 .card:hover .vis{opacity:.5;transform:scale(1.18)}
-.v1{background:radial-gradient(circle,#F2E43B,transparent 70%)}
+.v1{background:radial-gradient(circle,#FFFA00,transparent 70%)}
 .v2{background:radial-gradient(circle,#4f7bd8,transparent 70%)}
 .v3{background:radial-gradient(circle,#e0703f,transparent 70%)}
 .v4{background:radial-gradient(circle,#3fbf9a,transparent 70%)}
