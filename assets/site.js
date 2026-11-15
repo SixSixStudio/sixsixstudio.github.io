@@ -46,3 +46,16 @@
 
   d.getElementById('yr').textContent=new Date().getFullYear();
 })();
+
+/* tap the reel to hear it — no transport controls */
+(function(){
+  var v = document.getElementById('reelv'), h = document.getElementById('sndhint');
+  if(!v) return;
+  function toggle(e){
+    if(e) e.preventDefault();
+    if(v.muted){ v.muted = false; v.play(); if(h) h.classList.add('off'); }
+    else { v.muted = true; if(h) h.classList.remove('off'); }
+  }
+  if(h) h.addEventListener('click', toggle);
+  v.addEventListener('click', toggle);
+})();

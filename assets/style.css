@@ -407,3 +407,11 @@ html.js .rv.in{opacity:1;transform:none}
   .steps{grid-template-columns:repeat(2,1fr)}
   .step h5{font-size:12.5px}.step p{font-size:12.5px}
 }
+
+/* strip video: tap to unmute, no transport controls */
+.strip-vid .snd{position:absolute;right:10px;bottom:10px;z-index:3;font-family:Inter,sans-serif;
+  font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#08080A;
+  background:#FFFA00;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;opacity:.92;
+  transition:opacity .25s,transform .25s}
+.strip-vid .snd:hover{opacity:1;transform:translateY(-1px)}
+.strip-vid .snd.off{display:none}
