@@ -6,6 +6,7 @@
 <title>Sixsix Studio — Digital ads &amp; marketing</title>
 <meta name="description" content="Sixsix Studio is a digital advertising and marketing studio. Video ads, brand assets and managed publishing for London businesses — social clips, cinematic, animation, face and body work.">
 <meta name="theme-color" content="#08080A">
+<script>document.documentElement.className+=" js";</script>
 <meta property="og:title" content="Sixsix Studio — Digital ads &amp; marketing">
 <meta property="og:description" content="Video ads, brand assets and managed publishing. Built for the feed.">
 <meta property="og:type" content="website">
@@ -219,8 +220,8 @@ h2 em{font-style:italic;color:var(--y)}
 .foot a:hover{color:var(--ink)}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.rv.in{opacity:1;transform:none}
+html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+html.js .rv.in{opacity:1;transform:none}
 
 @media (max-width:940px){
   .hero-in{grid-template-columns:1fr;gap:38px}
