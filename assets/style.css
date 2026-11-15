@@ -259,7 +259,7 @@ html.js .rv.in{opacity:1;transform:none}
 .phead h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
   font-size:clamp(2.6rem,6.2vw,5rem);line-height:.98;letter-spacing:-.025em;max-width:18ch}
 .phead .lede{margin-top:22px;max-width:56ch}
-.media{position:relative;margin:44px auto 0;max-width:var(--max);aspect-ratio:16/9;
+.media{position:relative;margin:40px auto 0;max-width:var(--max);aspect-ratio:21/9;
   border:1px solid var(--line);border-radius:calc(var(--r) + 6px);overflow:hidden;background:#08080A}
 .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
 .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.2),transparent 45%,rgba(8,8,10,.75));pointer-events:none}
@@ -269,6 +269,7 @@ html.js .rv.in{opacity:1;transform:none}
   border-radius:999px;padding:6px 12px;backdrop-filter:blur(6px)}
 .pbody{max-width:var(--max);margin:0 auto;padding:clamp(48px,7vw,86px) clamp(18px,4vw,44px)}
 .dets{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;
+  margin-top:0;
   background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .dets div{background:var(--bg);padding:24px 22px}
 .dets h4{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--y);margin-bottom:14px;font-weight:500}
@@ -276,6 +277,7 @@ html.js .rv.in{opacity:1;transform:none}
 .dets li{font-size:13px;color:var(--mut);padding-left:13px;position:relative;line-height:1.45}
 .dets li::before{content:"";position:absolute;left:0;top:.55em;width:4px;height:4px;border-radius:50%;background:var(--dim)}
 .note{font-size:13.5px;color:var(--mut);max-width:62ch;margin-top:26px}
+@media (min-width:900px){.dets{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:860px){
   .tiles{grid-template-columns:1fr}
   .svc .body{flex-direction:column;align-items:flex-start;gap:12px}
