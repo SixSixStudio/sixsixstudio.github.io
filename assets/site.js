@@ -27,7 +27,7 @@
   }
 
   /* scroll reveal */
-  var rv=[].slice.call(d.querySelectorAll('.rv'));
+  var rv=[].slice.call(d.querySelectorAll('.rv,.step-media'));
   if('IntersectionObserver' in window && !rm){
     var io=new IntersectionObserver(function(es){
       es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
