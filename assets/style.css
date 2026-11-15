@@ -312,7 +312,7 @@ html.js .rv.in{opacity:1;transform:none}
 #services.flush{padding-left:0;padding-right:0}
 #services .shead{margin:0 clamp(18px,4vw,44px) 40px;border-bottom:0;padding-bottom:0}
 .rows{display:grid;gap:clamp(26px,3.4vw,48px);border:0;background:none;border-radius:0}
-.row{display:grid;grid-template-columns:clamp(46px,4.6vw,64px) clamp(300px,50vw,720px) minmax(0,1fr) auto;
+.row{display:grid;grid-template-columns:clamp(46px,4.6vw,64px) clamp(300px,50vw,720px) minmax(0,1fr);
   gap:0;align-items:stretch;border:0;background:none;
   padding:0 clamp(18px,4vw,44px) 0 0;transition:none}
 .row:hover{background:none;padding-left:0}
@@ -373,3 +373,6 @@ html.js .rv.in{opacity:1;transform:none}
 .hero-mark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
   width:min(64vw,520px);height:auto;opacity:.16;pointer-events:none;user-select:none;z-index:2}
 @media (max-width:640px){.hero-mark{width:88vw;opacity:.18}}
+
+.row .txt .go{display:inline-flex;margin-top:18px;border-bottom:1px solid rgba(255,250,0,.35)}
+.row .txt .go:hover{border-color:var(--y)}
