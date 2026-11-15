@@ -313,20 +313,20 @@ html.js .rv.in{opacity:1;transform:none}
 #services .shead{margin:0 clamp(18px,4vw,44px) 40px;border-bottom:0;padding-bottom:0}
 .rows{display:grid;gap:clamp(26px,3.4vw,48px);border:0;background:none;border-radius:0}
 .row{display:grid;grid-template-columns:clamp(64px,7vw,104px) clamp(300px,50vw,720px) minmax(0,1fr) auto;
-  gap:clamp(16px,2.6vw,40px);align-items:stretch;border:0;background:none;
+  gap:0;align-items:stretch;border:0;background:none;
   padding:0 clamp(18px,4vw,44px) 0 0;transition:none}
 .row:hover{background:none;padding-left:0}
 .bullet{background:var(--y);display:grid;place-items:center;border-radius:0}
 .bullet img{width:clamp(26px,3vw,44px);height:auto;object-fit:contain;display:block}
-.vid{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#08080A}
+.vid{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:0 10px 10px 0;background:#08080A}
 .vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;
   transition:opacity .5s,transform 1.4s var(--ease)}
 .row:hover .vid video{opacity:1;transform:scale(1.04)}
-.row .txt{align-self:center}
+.row .txt{align-self:center;padding-left:clamp(18px,2.6vw,40px)}
 .row .txt h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
   font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.04;margin-bottom:12px}
 .row .txt p{font-size:14px;color:var(--mut);max-width:38ch;line-height:1.55}
-.row .go{align-self:center;justify-self:end}
+.row .go{align-self:center;justify-self:end;padding-left:clamp(14px,2vw,28px)}
 @media (max-width:1024px){
   .row{grid-template-columns:44px minmax(0,1fr);row-gap:16px;padding-right:clamp(18px,4vw,44px)}
   .vid{grid-column:2}
