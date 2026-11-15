@@ -334,3 +334,31 @@ html.js .rv.in{opacity:1;transform:none}
   .row .go{grid-column:2;justify-self:start;margin-top:2px}
   .bullet img{width:24px}
 }
+
+/* ---------- title page ---------- */
+.hero.title-page{min-height:100svh;display:grid;place-items:center;padding:120px clamp(18px,4vw,44px) 90px;text-align:center}
+.title{position:relative;width:100%;max-width:1180px;margin:0 auto}
+.title h1{font-family:"Space Grotesk",Inter,sans-serif;font-weight:500;
+  font-size:clamp(2.05rem,5.1vw,4.5rem);line-height:1.04;letter-spacing:-.035em;text-wrap:balance}
+.title h1 em{font-style:normal;color:var(--y)}
+.title .l1,.title .l2{display:block}
+.title .l2{margin-top:clamp(96px,13vw,168px)}
+.title-mark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:clamp(74px,7.6vw,108px);height:auto;z-index:3;
+  filter:drop-shadow(0 0 40px rgba(255,250,0,.25))}
+@media (max-width:640px){.title .l2{margin-top:84px}.title-mark{width:66px}}
+
+/* ---------- film strip ---------- */
+.strip{position:relative;background:#fff;margin-top:clamp(40px,7vw,90px)}
+.strip .mq{background:#08080A;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip-mid{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;background:#fff;min-height:220px}
+.strip-side{display:grid;place-items:center;background:#fff;padding:clamp(16px,3vw,34px)}
+.strip-side img{width:clamp(80px,9vw,142px);height:auto;display:block}
+.strip-vid{position:relative;width:min(760px,54vw);aspect-ratio:16/9;overflow:hidden;background:#08080A}
+.strip-vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){
+  .strip-vid{width:min(100%,88vw)}
+  .strip-mid{grid-template-columns:56px minmax(0,1fr) 56px;min-height:0}
+  .strip-side img{width:34px}
+}
+.r6 video{object-position:26% 78%;filter:brightness(1.05) saturate(1.12) hue-rotate(6deg)}
