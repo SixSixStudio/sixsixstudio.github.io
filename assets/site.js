@@ -46,23 +46,3 @@
 
   d.getElementById('yr').textContent=new Date().getFullYear();
 })();
-
-/* tap the reel to hear it — no transport controls */
-(function(){
-  var v = document.getElementById('reelv'), h = document.getElementById('sndhint');
-  if(!v) return;
-  function toggle(e){
-    if(e) e.preventDefault();
-    if(v.muted){
-      v.muted = false; v.volume = 1;
-      var pr = v.play();
-      if(pr && pr.catch) pr.catch(function(){});
-      if(h){ h.textContent = 'Sound on'; setTimeout(function(){ h.classList.add('off'); }, 900); }
-    } else {
-      v.muted = true;
-      if(h){ h.textContent = 'Tap for sound'; h.classList.remove('off'); }
-    }
-  }
-  if(h) h.addEventListener('click', toggle);
-  v.addEventListener('click', toggle);
-})();
