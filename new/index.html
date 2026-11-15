@@ -521,6 +521,8 @@ html.js .rv.in{opacity:1;transform:none}
     },{rootMargin:'0px 0px -8% 0px',threshold:.12});
     rv.forEach(function(el,i){ el.style.transitionDelay=(Math.min(i,6)*45)+'ms'; io.observe(el); });
   } else { rv.forEach(function(el){el.classList.add('in');}); }
+  /* safety net: nothing stays hidden if the observer never fires (tall viewports, crawlers, screenshots) */
+  setTimeout(function(){ rv.forEach(function(el){ el.classList.add('in'); }); },1400);
 
   /* video fallbacks: if the loop is missing, keep the gradient bloom only */
   [].forEach.call(d.querySelectorAll('video'),function(v){
