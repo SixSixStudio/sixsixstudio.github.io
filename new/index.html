@@ -79,12 +79,13 @@ img,video{display:block;max-width:100%}
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;
   padding:132px clamp(18px,4vw,44px) 72px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hero-bg video{width:100%;height:100%;object-fit:cover;opacity:.92;
-  filter:saturate(.85) contrast(1.05)}
+.hero-bg video{width:100%;height:100%;object-fit:cover;object-position:38% center;opacity:.95;
+  filter:saturate(1.1) contrast(1.06)}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.86) 30%,rgba(8,8,10,.45) 58%,rgba(8,8,10,.18) 80%,rgba(8,8,10,.5) 100%),linear-gradient(180deg,rgba(8,8,10,.35),transparent 45%,rgba(8,8,10,.85) 96%,var(--bg))}
 .bloom{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;pointer-events:none}
-.b1{width:46vw;height:46vw;left:-10vw;top:-12vw;background:radial-gradient(circle,#6b5f10,transparent 65%);animation:float1 22s ease-in-out infinite}
-.b2{width:38vw;height:38vw;right:-8vw;bottom:-14vw;background:radial-gradient(circle,#1f2b4d,transparent 65%);animation:float2 27s ease-in-out infinite}
+.b1{width:52vw;height:52vw;left:-12vw;top:-14vw;background:radial-gradient(circle,rgba(160,132,20,.55),transparent 66%);opacity:.7;animation:float1 22s ease-in-out infinite}
+.b2{width:44vw;height:44vw;right:-10vw;bottom:-16vw;background:radial-gradient(circle,rgba(36,58,110,.6),transparent 66%);opacity:.75;animation:float2 27s ease-in-out infinite}
+.b3{width:34vw;height:34vw;right:16vw;top:6vh;background:radial-gradient(circle,rgba(190,96,26,.4),transparent 66%);opacity:.6;animation:float1 31s ease-in-out infinite reverse}
 @keyframes float1{50%{transform:translate(6vw,5vw) scale(1.12)}}
 @keyframes float2{50%{transform:translate(-5vw,-4vw) scale(1.08)}}
 .hero-in{position:relative;z-index:1;width:100%;max-width:var(--max);margin:0 auto;
@@ -110,7 +111,7 @@ h1 em{font-style:italic;color:var(--y)}
 .reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;
   filter:contrast(1.12) saturate(.95)}
 .reel::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(8,8,10,.28) 0%,transparent 40%,rgba(8,8,10,.86) 100%)}
+  background:linear-gradient(180deg,rgba(8,8,10,.22) 0%,transparent 46%,rgba(8,8,10,.82) 100%)}
 .reel-ui{position:absolute;inset:0;z-index:2;padding:16px;display:flex;flex-direction:column;justify-content:space-between}
 .reel-top{display:flex;justify-content:space-between;align-items:flex-start;font-size:10px;
   letter-spacing:.18em;text-transform:uppercase;color:rgba(244,242,236,.7)}
@@ -258,7 +259,8 @@ h2 em{font-style:italic;color:var(--y)}
     <div class="hero-bg">
       <div class="bloom b1"></div>
       <div class="bloom b2"></div>
-      <video id="bgv" autoplay muted loop playsinline preload="auto" poster="assets/poster.jpg">
+      <div class="bloom b3"></div>
+      <video id="bgv" autoplay muted loop playsinline preload="auto" poster="assets/poster-hero.jpg">
         <source src="assets/bg-loop.mp4" type="video/mp4">
       </video>
     </div>
@@ -275,7 +277,7 @@ h2 em{font-style:italic;color:var(--y)}
       </div>
 
       <div class="reel" id="reel">
-        <video autoplay muted loop playsinline preload="auto" poster="assets/poster.jpg">
+        <video autoplay muted loop playsinline preload="auto" poster="assets/poster-reel.jpg">
           <source src="assets/reel.mp4" type="video/mp4">
         </video>
         <div class="reel-ui">
