@@ -338,15 +338,14 @@ html.js .rv.in{opacity:1;transform:none}
 /* ---------- title page ---------- */
 .hero.title-page{min-height:100svh;display:grid;place-items:center;padding:120px clamp(18px,4vw,44px) 90px;text-align:center}
 .title{position:relative;width:100%;max-width:1180px;margin:0 auto}
-.title h1{font-family:"Archivo",Inter,sans-serif;font-weight:800;
-  font-size:clamp(1.95rem,5vw,4.3rem);line-height:.99;letter-spacing:-.042em;
+.title h1{font-family:"Syne",Inter,sans-serif;font-weight:800;
+  font-size:clamp(1.75rem,4.4vw,3.85rem);line-height:1.02;letter-spacing:-.03em;
   text-transform:none;text-wrap:balance}
-.title h1 em{font-style:normal;color:var(--y)}
 .title .line{display:block;overflow:hidden;padding-bottom:.07em;margin-bottom:-.07em}
 .title .line>span{display:block;transform:translateY(114%);will-change:transform;
   animation:titleRise 1.05s cubic-bezier(.22,1,.36,1) forwards}
 @keyframes titleRise{to{transform:translateY(0)}}
-.title h1 em{background:linear-gradient(92deg,var(--y) 0%,#FFF9B0 55%,var(--y) 100%);
+.title h1 em{font-style:normal;background:linear-gradient(92deg,var(--y) 0%,#FFF9B0 55%,var(--y) 100%);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
   background-size:220% 100%;animation:shine 6s linear infinite}
 @keyframes shine{to{background-position:-120% 0}}
