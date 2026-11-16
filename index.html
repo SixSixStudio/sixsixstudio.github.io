@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=48">
+<link rel="stylesheet" href="assets/style.css?v=49">
 </head>
 <body>
 <div id="grain"></div>
@@ -22,12 +22,22 @@
     Sixsix Studio
   </a>
   <nav class="nlinks">
-    <a href="index.html#services">Video / Animation</a>
-    <a href="services/autonomous-posting.html">Autonomous Posting</a>
-    <a href="index.html#process">Process</a>
-    <a href="index.html#contact">Contact</a>
+    <div class="dd" id="dd">
+      <button class="ddbtn" type="button" aria-expanded="false" aria-controls="ddmenu">Services <span class="caret">&#9662;</span></button>
+      <div class="ddmenu" id="ddmenu" role="menu">
+      <a role="menuitem" href="#svc-social-clips">Social clips</a>
+      <a role="menuitem" href="#svc-cinematic">Cinematic</a>
+      <a role="menuitem" href="#svc-macro-shots">Macro Shots</a>
+      <a role="menuitem" href="#svc-animation">Animation</a>
+      <a role="menuitem" href="#svc-autonomous-posting">Autonomous Posting</a>
+      <a role="menuitem" href="#svc-ai-marketing-agent">AI Marketing Agent</a>
+      <a role="menuitem" href="#svc-campaign-kit">Campaign Kit</a>
+      </div>
+    </div>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <a class="btn btn-y" href="index.html#contact">Book a call <span class="arrow">&#8599;</span></a>
+  <a class="btn btn-y" href="#contact">Book a call <span class="arrow">&#8599;</span></a>
 </header>
 
 <main id="top">
@@ -77,40 +87,40 @@
         <div><h2>Video / Animation</h2></div>
       </div>
       <div class="rows">
-        <a class="row r1" href="services/social-clips.html">
+                <a class="row r1" id="svc-social-clips" href="services/social-clips.html">
           <div class="bullet"><img src="assets/mark-bw.png" alt=""></div>
           <div class="vid"><video autoplay muted loop playsinline preload="none" poster="assets/poster-social.jpg"><source src="assets/clip-social.mp4" type="video/mp4"></video></div>
           <div class="txt"><h3>Social clips</h3><p>Short vertical video built for the feed — offers, demos and stories in fifteen to sixty seconds.</p><span class="go">More <span class="arrow">&#8599;</span></span></div>
         </a>
-        <a class="row r2" href="services/cinematic.html">
+        <a class="row r2" id="svc-cinematic" href="services/cinematic.html">
           <div class="bullet"><img src="assets/mark-bw.png" alt=""></div>
           <div class="vid"><video autoplay muted loop playsinline preload="none" poster="assets/poster-cinematic.jpg"><source src="assets/clip-cinematic.mp4" type="video/mp4"></video></div>
           <div class="txt"><h3>Cinematic</h3><p>No actors, no location. Product film, impossible camera moves, macro detail — and face and body work.</p><span class="go">More <span class="arrow">&#8599;</span></span></div>
         </a>
-        <a class="row r3" href="services/macro-shots.html">
+        <a class="row r3" id="svc-macro-shots" href="services/macro-shots.html">
           <div class="bullet"><img src="assets/mark-bw.png" alt=""></div>
           <div class="vid"><video autoplay muted loop playsinline preload="none" poster="assets/poster-macro.jpg"><source src="assets/clip-macro.mp4" type="video/mp4"></video></div>
           <div class="txt"><h3>Macro Shots</h3><p>Extreme close-up: droplets, pours, powder, condensation, fabric and skin — the detail that makes a product look made properly.</p><span class="go">More <span class="arrow">&#8599;</span></span></div>
         </a>
-        <a class="row r4" href="services/animation.html">
+        <a class="row r4" id="svc-animation" href="services/animation.html">
           <div class="bullet"><img src="assets/mark-bw.png" alt=""></div>
           <div class="vid"><video autoplay muted loop playsinline preload="none" poster="assets/poster-animation.jpg"><source src="assets/clip-animation.mp4" type="video/mp4"></video></div>
           <div class="txt"><h3>Animation</h3><p>Cartoon, anime, 3D feature and motion graphics — a look you can't shoot.</p><span class="go">More <span class="arrow">&#8599;</span></span></div>
         </a>
-        <a class="row r5" href="services/campaign-kit.html">
-          <div class="bullet"><img src="assets/mark-bw.png" alt=""></div>
-          <div class="vid"><video autoplay muted loop playsinline preload="none" poster="assets/poster-brand.jpg"><source src="assets/clip-brand.mp4" type="video/mp4"></video></div>
-          <div class="txt"><h3>Campaign Kit</h3><p>Scripts, brand assets, copy, landing pages and reporting. Everything around the video, packaged as one service.</p><span class="go">More <span class="arrow">&#8599;</span></span></div>
-        </a>
-        <a class="row r6" href="services/autonomous-posting.html">
+        <a class="row r5" id="svc-autonomous-posting" href="services/autonomous-posting.html">
           <div class="bullet"><img src="assets/mark-bw.png" alt=""></div>
           <div class="vid"><video autoplay muted loop playsinline preload="none" poster="assets/poster-posting.jpg"><source src="assets/clip-posting.mp4" type="video/mp4"></video></div>
           <div class="txt"><h3>Autonomous Posting</h3><p>Your accounts and your schedule. One tap to post to every platform at the same time — YouTube, TikTok, Instagram, Facebook and more.</p><span class="go">More <span class="arrow">&#8599;</span></span></div>
         </a>
-        <a class="row r7" href="services/ai-marketing-agent.html">
+        <a class="row r6" id="svc-ai-marketing-agent" href="services/ai-marketing-agent.html">
           <div class="bullet"><img src="assets/mark-bw.png" alt=""></div>
           <div class="vid"><video autoplay muted loop playsinline preload="none" poster="assets/poster-agent.jpg"><source src="assets/clip-agent.mp4" type="video/mp4"></video></div>
           <div class="txt"><h3>AI Marketing Agent</h3><p>A custom agent built for your socials and marketing. Runs 24/7, watched from your phone — pulling data, writing reports, tracking trends and never clocking off.</p><span class="go">More <span class="arrow">&#8599;</span></span></div>
+        </a>
+        <a class="row r7" id="svc-campaign-kit" href="services/campaign-kit.html">
+          <div class="bullet"><img src="assets/mark-bw.png" alt=""></div>
+          <div class="vid"><video autoplay muted loop playsinline preload="none" poster="assets/poster-brand.jpg"><source src="assets/clip-brand.mp4" type="video/mp4"></video></div>
+          <div class="txt"><h3>Campaign Kit</h3><p>Scripts, brand assets, copy, landing pages and reporting. Everything around the video, packaged as one service.</p><span class="go">More <span class="arrow">&#8599;</span></span></div>
         </a>
       </div>
   </section>
@@ -147,6 +157,6 @@
   <span>Video &middot; Brand &middot; Publishing</span>
   <a href="index.html">Back to home &#8593;</a>
 </footer>
-<script src="assets/site.js?v=48"></script>
+<script src="assets/site.js?v=49"></script>
 </body>
 </html>

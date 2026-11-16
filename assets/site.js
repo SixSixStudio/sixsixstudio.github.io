@@ -44,5 +44,20 @@
     if(s) s.addEventListener('error',function(){ v.style.display='none'; });
   });
 
+
+  /* services dropdown */
+  var dd=d.getElementById('dd');
+  if(dd){
+    var ddbtn=dd.querySelector('.ddbtn');
+    var setOpen=function(on){ dd.classList.toggle('open',on); ddbtn.setAttribute('aria-expanded',on?'true':'false'); };
+    ddbtn.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); setOpen(!dd.classList.contains('open')); });
+    dd.addEventListener('mouseleave',function(){ setOpen(false); });
+    d.addEventListener('click',function(e){ if(!dd.contains(e.target)) setOpen(false); });
+    d.addEventListener('keydown',function(e){ if(e.key==='Escape') setOpen(false); });
+    Array.prototype.forEach.call(dd.querySelectorAll('.ddmenu a'),function(a){
+      a.addEventListener('click',function(){ setOpen(false); });
+    });
+  }
+
   d.getElementById('yr').textContent=new Date().getFullYear();
 })();
