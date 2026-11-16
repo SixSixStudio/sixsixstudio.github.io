@@ -59,5 +59,21 @@
     });
   }
 
+
+  /* mobile menu */
+  var mb=d.getElementById('mburger'), mm=d.getElementById('mmobile');
+  if(mb && mm){
+    var setM=function(on){
+      mm.classList.toggle('on',on); mb.classList.toggle('on',on);
+      mb.setAttribute('aria-expanded',on?'true':'false');
+      d.body.style.overflow=on?'hidden':'';
+    };
+    mb.addEventListener('click',function(e){ e.stopPropagation(); setM(!mm.classList.contains('on')); });
+    Array.prototype.forEach.call(mm.querySelectorAll('a'),function(a){
+      a.addEventListener('click',function(){ setM(false); });
+    });
+    d.addEventListener('keydown',function(e){ if(e.key==='Escape') setM(false); });
+  }
+
   d.getElementById('yr').textContent=new Date().getFullYear();
 })();
