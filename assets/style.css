@@ -79,7 +79,7 @@ img,video{display:block;max-width:100%}
   .mburger.on span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
   .mburger.on span:nth-child(2){opacity:0}
   .mburger.on span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-  .mmobile{display:block;position:fixed;inset:0;z-index:60;background:#08080A;
+  .mmobile{display:block;position:fixed;inset:0;z-index:49;background:#08080A;
     padding:104px 22px 44px;overflow-y:auto;
     opacity:0;visibility:hidden;transform:translateY(-10px);
     transition:opacity .3s var(--ease),transform .42s var(--ease),visibility .3s}
