@@ -75,5 +75,15 @@
     d.addEventListener('keydown',function(e){ if(e.key==='Escape') setM(false); });
   }
 
+
+  /* homepage reel: silent, looping, no chrome */
+  var rv=d.getElementById('reelv');
+  if(rv){
+    rv.muted=true; rv.controls=false;
+    var kick=function(){ var p=rv.play(); if(p&&p.catch) p.catch(function(){}); };
+    rv.addEventListener('canplay',kick,{once:true});
+    kick();
+  }
+
   d.getElementById('yr').textContent=new Date().getFullYear();
 })();
