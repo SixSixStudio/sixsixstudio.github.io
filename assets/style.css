@@ -481,3 +481,7 @@ html.js .rv.in{opacity:1;transform:none}
   transition:opacity .25s,transform .25s}
 .strip-vid .snd:hover{opacity:1;transform:translateY(-1px)}
 .strip-vid .snd.off{display:none}
+
+/* full-width film — replaces the band */
+.film{background:#08080A;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.film video{display:block;width:100%;height:auto;background:#08080A}
