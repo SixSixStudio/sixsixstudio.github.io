@@ -11,12 +11,7 @@
   .wrap{max-width:1120px;margin:0 auto;padding:40px 20px 80px}
   h1{font:600 22px/1.2 inherit;letter-spacing:.01em;margin:0 0 6px}
   p.sub{color:var(--mut);margin:0 0 28px;font-size:14px}
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--line);border:1px solid var(--line)}
-  .panel{position:relative;background:#0d0d10}
-  .panel{aspect-ratio:640/720}
-  .panel img{display:block;width:100%;height:100%;object-fit:cover}
-  .tag{position:absolute;top:10px;left:12px;font:500 11px/1 ui-monospace,monospace;letter-spacing:.14em;color:#fff;opacity:.85}
-  .tag.r{left:auto;right:12px}
+  .pair{display:block;width:100%;height:auto;border:1px solid var(--line)}
   .note{margin-top:22px;color:var(--mut);font-size:13px;line-height:1.7}
   .note b{color:var(--ink);font-weight:600}
   .bar{height:3px;background:var(--y);margin:26px 0 0;width:120px}
@@ -26,16 +21,7 @@
 <div class="wrap">
   <h1>The pair I want to use</h1>
   <p class="sub">Real photo on the left, our frame on the right — same drink, two media. This is what would sit either side of the split in section 1.</p>
-  <div class="split">
-    <div class="panel">
-      <span class="tag">BEFORE</span>
-      <img src="ba-before.jpg" alt="A real cafe photo of a latte">
-    </div>
-    <div class="panel">
-      <span class="tag r">AFTER</span>
-      <img src="ba-after.jpg" alt="A frame from our latte pour">
-    </div>
-  </div>
+  <img class="pair" src="ba-pair.jpg" alt="Before: a real cafe photo of a latte. After: a frame from our latte pour.">
   <div class="bar"></div>
   <p class="note">
     <b>Left:</b> a real cafe photo of a latte, shot on a phone, 1024×683, CC0 — no credit needed, safe to use commercially.<br>
