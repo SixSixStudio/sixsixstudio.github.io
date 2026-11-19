@@ -484,4 +484,4 @@ html.js .rv.in{opacity:1;transform:none}
 
 /* full-width film — replaces the band */
 .film{background:#08080A;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
-.film video{display:block;width:100%;height:auto;background:#08080A}
+.film video{display:block;width:100%;max-width:1120px;margin:0 auto;height:auto;background:#08080A}
