@@ -195,7 +195,7 @@ html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ea
 html.js .rv.in{opacity:1;transform:none}
 
 /* ---------- service pages (legacy markup, restyled) ---------- */
-.phead{padding:calc(64px + 54px) 0 0}
+.phead{padding:calc(64px + 104px) 0 0}
 .phead-in{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 .back{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;
   letter-spacing:.13em;text-transform:uppercase;color:var(--dim);margin-bottom:22px;transition:color .25s}
@@ -282,6 +282,7 @@ html.js .rv.in{opacity:1;transform:none}
   .footmark{display:none}
   .brand .mark,.brand .mark img{width:44px;height:44px}
   .mast{padding-top:calc(76px + 34px)}
+  .phead{padding:calc(34px + 76px) 0 0}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
