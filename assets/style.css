@@ -46,8 +46,8 @@ h1,h2,h3,h4,h5{font-family:var(--disp);font-weight:600;letter-spacing:-.035em;li
 .nav.hide{transform:translateY(-101%)}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:600;
   font-size:14px;letter-spacing:-.01em}
-.brand .mark{width:24px;height:24px;border-radius:50%;background:var(--ink);display:grid;place-items:center;flex:none}
-.brand .mark img{width:24px;height:24px;object-fit:contain;border-radius:50%;filter:invert(1)}
+.brand .mark{width:72px;height:72px;border-radius:50%;background:var(--ink);display:grid;place-items:center;flex:none}
+.brand .mark img{width:72px;height:72px;object-fit:contain;border-radius:50%;filter:invert(1)}
 .nlinks{display:flex;align-items:center;gap:26px;margin-left:auto}
 .nlinks a,.ddbtn{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
   color:var(--mut);background:none;border:0;cursor:pointer;padding:0;transition:color .25s}
@@ -85,7 +85,7 @@ h1,h2,h3,h4,h5{font-family:var(--disp);font-weight:600;letter-spacing:-.035em;li
 
 /* ---------- masthead ---------- */
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
-.mast{padding-top:calc(64px + 54px)}
+.mast{padding-top:calc(64px + 104px)}
 .mast-top{display:flex;justify-content:space-between;gap:20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
 .mast h1{
   font-size:clamp(2.75rem,9.2vw,8.6rem);line-height:.86;letter-spacing:-.045em;font-weight:600;
@@ -280,6 +280,8 @@ html.js .rv.in{opacity:1;transform:none}
 }
 @media (max-width:700px){
   .footmark{display:none}
+  .brand .mark,.brand .mark img{width:44px;height:44px}
+  .mast{padding-top:calc(76px + 34px)}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
