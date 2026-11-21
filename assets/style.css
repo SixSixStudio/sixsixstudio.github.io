@@ -295,6 +295,22 @@ html.js .rv.in{opacity:1;transform:none}
 .howbox ul{list-style:none;display:grid;gap:9px}
 .howbox li{font-size:14.5px;color:var(--mut);line-height:1.45;padding-left:16px;position:relative}
 .howbox li::before{content:"";position:absolute;left:0;top:.66em;width:8px;height:1px;background:var(--line2)}
+
+/* lettered steps — readable, wide leading */
+.steps{list-style:none;display:grid;gap:0;margin:0;padding:0}
+.steps li{display:grid;grid-template-columns:38px 1fr;gap:clamp(12px,1.6vw,22px);
+  align-items:start;padding:clamp(13px,1.7vw,19px) 0;border-top:1px solid var(--line)}
+.steps li::before{content:none}
+.steps li:first-child{border-top:0;padding-top:0}
+.steps li:last-child{border-bottom:1px solid var(--line);padding-bottom:clamp(13px,1.7vw,19px)}
+.steps .sl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--dim);padding-top:.35em}
+.steps h5{font-family:var(--disp);font-weight:600;font-size:clamp(1.02rem,1.5vw,1.2rem);
+  letter-spacing:-.02em;line-height:1.2;color:var(--ink);margin:0 0 5px}
+.steps p{font-size:15.5px;line-height:1.55;color:var(--mut);max-width:56ch}
+@media (max-width:620px){
+  .steps li{grid-template-columns:26px 1fr;gap:10px}
+  .steps p{font-size:15px}
+}
 .skills li.more{color:var(--dim);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 .foot{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:space-between;align-items:baseline;
   border-top:1px solid var(--line);padding:22px var(--gut) 34px}
