@@ -182,7 +182,10 @@ h1,h2,h3,h4,h5{font-family:var(--disp);font-weight:600;letter-spacing:-.035em;li
 .contact .sub{margin-top:18px;font-size:14.5px;color:var(--mut);max-width:52ch}
 
 /* ---------- footer ---------- */
-.foot{border-top:1px solid var(--line);padding:22px 0 34px}
+.foot{position:relative;border-top:1px solid var(--line);padding:22px 0 34px}
+.footmark{position:absolute;right:clamp(var(--gut),calc((100vw - var(--max))/2),100vw);
+  bottom:calc(100% - 1px);width:clamp(130px,15vw,230px);height:auto;
+  pointer-events:none;user-select:none}
 .foot .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:baseline}
 .foot a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
 .foot a:hover{color:var(--ink)}
@@ -274,6 +277,7 @@ html.js .rv.in{opacity:1;transform:none}
   .srow{grid-template-columns:32px 1fr;row-gap:6px}
   .srow .m{grid-column:2;text-align:left}
   .contact h2{font-size:clamp(1.9rem,9vw,3rem)}
+  .footmark{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
