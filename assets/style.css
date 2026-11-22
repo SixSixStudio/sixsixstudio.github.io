@@ -202,6 +202,7 @@ html.js .rv.in{opacity:1;transform:none}
 .back:hover{color:var(--ink)}
 .phead h1{font-size:clamp(2.4rem,7vw,5.4rem);line-height:.88;letter-spacing:-.045em;max-width:20ch}
 .phead .lede{margin-top:18px;max-width:56ch;font-size:clamp(15px,1.5vw,18px);color:var(--mut);line-height:1.55}
+.phead .lede-tight{font-size:clamp(15px,1.32vw,16.5px);max-width:64ch;line-height:1.62}
 .media{position:relative;margin:clamp(26px,4vw,44px) 0 0;aspect-ratio:16/9;background:#0B0B0C;overflow:hidden}
 .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .media .slot{position:absolute;left:14px;bottom:12px;z-index:3;font-family:var(--mono);font-size:10px;
