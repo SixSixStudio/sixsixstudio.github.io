@@ -160,6 +160,8 @@ h1,h2,h3,h4,h5{font-family:var(--disp);font-weight:600;letter-spacing:-.035em;li
   color:var(--paper);margin-bottom:3px}
 .retain .fine{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
   color:rgba(241,238,231,.42);margin-top:16px}
+.retain .price{font-family:var(--disp);font-weight:600;font-size:clamp(1.05rem,1.6vw,1.35rem);
+  letter-spacing:-.02em;color:var(--paper);margin-top:22px}
 .retain .btn{background:var(--paper);border-color:var(--paper);color:var(--ink);margin-top:26px}
 .retain .btn:hover{background:var(--y);border-color:var(--y)}
 
